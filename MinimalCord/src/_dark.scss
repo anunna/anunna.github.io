@@ -1,0 +1,31 @@
+$background: #0A0B11;
+
+.theme-dark {
+  // Background
+  --background-light: #{lighten($background, 5%)};
+  --background: #{$background};
+  --background-alt: #{lighten($background, 2%)};
+  --background-dark: #{darken($background, 2%)};
+
+  // Text colours
+  --text-normal: #{mix(#fff, $background, 80%)};
+  --text-muted: #{mix(#fff, $background, 35%)};
+  --text-focus: #fff;
+
+  // Font weights
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 500;
+  --font-weight-bold: 700;
+
+  // Box shadows
+  --box-shadow: 0 4px 9px rgba(0 0 0 / 0.4);
+  --box-shadow-alt: 0 2px 5px rgba(0 0 0 / 0.3);
+
+  // Scrollbars
+  --scrollbar-colour: var(--background-light);
+
+  // Messages
+  --edit-message-box: var(--background-light);
+  --message-background: var(--background-alt);
+}

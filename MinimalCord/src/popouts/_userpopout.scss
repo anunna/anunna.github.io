@@ -1,0 +1,66 @@
+#app-mount {
+  .userPopout-3XzG_A {
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+
+    .headerNormal-T_seeN {
+      background: var(--background);
+    }
+    .body-3iLsc4 {
+      background: var(--background-alt);
+    }
+
+
+    .footer-1fjuF6 {
+      background: var(--background-alt);
+      padding-bottom: 0;
+    }
+    .note-3HfJZ5 {
+      margin: 0;
+    }
+    .textarea-2r0oV8:focus {
+      background: var(--background-dark);
+    }
+    .input-2_SIlA {
+      background: var(--background-dark);
+      border: none;
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: 20px;
+    }
+    .protip-YaFfgO {
+      display: none;
+    }
+  }
+
+  // Roles
+  .role-2irmRk {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border: none;
+  }
+  .roleCircle-3xAZ1j::after {
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: inherit;
+    opacity: 0.3;
+    z-index: -1;
+  }
+
+  // States
+  .headerPlaying-j0WQBV {
+    background: var(--background);
+  }
+  .headerSpotify-zpWxgT {
+    background: var(--background);
+    .button-1Pkqso {
+      background: rgba(var(--discord-spotify) / 1);
+      border: none;
+    }
+  }
+}

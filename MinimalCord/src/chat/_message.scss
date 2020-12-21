@@ -1,0 +1,209 @@
+#app-mount {
+  // General messages
+  .message-2qnXI6 {
+    .scrollableContainer-2NUZem {
+      background: var(--edit-message-box);
+      box-shadow: none;
+    }
+  }
+
+  // Cozy
+  .cozy-3raOZG {
+    background: transparent;
+    padding-top: var(--message-padding);
+    padding-bottom: var(--message-padding);
+    padding-left: 0;
+    margin-left: 16px;
+    margin-right: 8px;
+    position: relative;
+    // Rounded background
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: var(--message-border-radius, var(--border-radius));
+      background: var(--background-alt);
+      z-index: -1;
+    }
+    // Fix positioning for message contents (text and images)
+    .contents-2mQqc9,
+    .container-1ov-mD {
+      margin-left: calc(40px + (var(--message-padding) * 2));
+    }
+    // Fix positioning for avatar
+    .avatar-1BDn8e {
+      left: var(--message-padding);
+      top: var(--message-padding);
+      margin-top: 0;
+    }
+    // Add custom spacing between messages
+    &.groupStart-23k01U {
+      margin-top: var(--message-spacing);
+    }
+    // Every message after groupStart that's not groupStart
+    & + .cozy-3raOZG:not(.groupStart-23k01U) {
+      margin-top: calc(var(--message-padding) / -1);
+      padding-top: .175rem;
+    }
+    // Reduce negative margin and padding
+    .messageContent-2qWWxC {
+      margin-left: -5px;
+      padding-left: 5px;
+    }
+
+    // Buttons
+    .wrapper-2aW0bm {
+      background: var(--background-light);
+      height: 24px;
+      box-shadow: var(--box-shadow-alt);
+    }
+    .button-1ZiXG9 {
+      height: 24px;
+      width: 24px;
+      padding: 0;
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+      &:hover {
+        background: rgba(var(--accent), 1);
+        color: #fff;
+      }
+      &.dangerous-2r8KxV:hover {
+        background: rgba(var(--discord-red) / 1);
+      }
+    }
+
+    // Timestamps
+    .timestamp-3ZCmNB.alt-1uNpEt {
+      width: calc(40px + var(--message-padding));
+      display: flex;
+      justify-content: center;
+    }
+
+    // Mentioned
+    &.mentioned-xhSam7 {
+      .messageContent-2qWWxC {
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 0 var(--border-radius) 0 0;
+          height: 100%;
+          width: calc(100% - var(--message-padding));
+          border-left: 2px solid rgba(var(--discord-yellow) / 1);
+          background: var(--background-mentioned);
+          pointer-events: none;
+        }
+      }
+      .container-1ov-mD {
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          pointer-events: none;
+          top: 0;
+          left: -5px;
+          height: 100%;
+          width: calc(100% - var(--message-padding) + 5px);
+          border-left: 2px solid rgba(var(--discord-yellow) / 1);
+          background: var(--background-mentioned);
+          border-radius: 0 0 var(--border-radius) 0;
+        }
+      }
+    }
+  }
+
+  // Compact
+
+  // Mentions & Chat jumps
+  .wrapper-3WhCwL {
+    background: rgba(var(--accent), 0.1);
+    color: rgba(var(--accent), 1);
+    &:hover, &.popout-open {
+      background: rgba(var(--accent), 1);
+      color: #fff;
+    }
+  }
+
+  // Replied quote
+  .repliedMessage-VokQwo {
+    margin-left: calc(var(--message-padding) + 56px);
+    & + .contents-2mQqc9 {
+      .avatar-1BDn8e, img {
+        top: 32px;
+      }
+    }
+    &:before {
+      border-color: var(--text-muted);
+    }
+  }
+
+  // Message placeholders
+  .wrapper-3vR61M {
+    background: transparent;
+  }
+  // Pretty much the same as #L3
+  .wrapper-1F5TKx {
+    background: transparent;
+    padding-top: var(--message-padding);
+    padding-bottom: var(--message-padding);
+    padding-left: 0;
+    margin-left: 16px;
+    margin-right: 8px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: var(--message-border-radius, var(--border-radius));
+      background: var(--background-alt);
+      z-index: -1;
+    }
+    .contents-1R-xLu,
+    .attachmentContainer-2BK1nK {
+      padding-left: calc(40px + (var(--message-padding) * 2));
+    }
+    .avatar-1BDn8e {
+      left: var(--message-padding);
+      top: var(--message-padding);
+      margin-top: 0;
+    }
+    &[style*="margin-top"] {
+      margin-top: var(--message-spacing) !important;
+    }
+    & + .wrapper-1F5TKx:not([style*="margin-top"]) {
+      margin-top: calc(var(--message-padding) / -1);
+      padding-top: .175rem;
+    }
+  }
+
+  // Embeds
+  .embedFull-2tM8-- {
+    background: var(--background-dark);
+  }
+
+  // Attachments
+  .attachment-33OFj0,
+  .wrapperAudio-1jDe0Q {
+    background: var(--background-dark);
+    border-radius: var(--border-radius);
+    border: none;
+  }
+
+  // Code blocks
+  pre code,
+  code.inline {
+    background: var(--background-dark);
+    border-radius: var(--border-radius);
+    border: none;
+  }
+}

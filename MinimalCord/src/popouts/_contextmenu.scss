@@ -1,0 +1,22 @@
+.theme-light .menu-3sdvDG {
+  background: var(--background-light);
+}
+.theme-dark .menu-3sdvDG {
+  background: var(--background-dark);
+}
+
+#app-mount {
+  .item-1tOPte {
+    line-height: normal;
+    &:active, &.focused-3afm-j:not(.colorDanger-2qLCe1) {
+      background: rgba(var(--accent), 1);
+    }
+    &.colorPremium-p4p7qO {
+      color: rgba(var(--discord-nitro) / 1);
+      &.focused-3afm-j {
+        color: #fff;
+        background: rgba(var(--discord-nitro) / 1);
+      }
+    }
+  }
+}
