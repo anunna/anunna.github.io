@@ -37,10 +37,10 @@
 }
 
 .theme-dark {
-  --background-light: #22262e;
+  --background-light: #0F111A;
   --background: #0A0B11;
   --background-alt: #0F111A;
-  --background-dark: #131519;
+  --background-dark: #0A0B11;
   --text-normal: #d1d1d2;
   --text-muted: #686a6d;
   --text-focus: #fff;
